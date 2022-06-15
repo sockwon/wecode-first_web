@@ -1,0 +1,21 @@
+main h1 {
+    text-align: center;
+    font-size: 45px;
+    border-bottom: solid gray 1px;
+    margin:0;
+}
+main ol {
+    text-align: center;
+    font-size: 15px;
+    border-right: solid gray 1px;
+    max-width: 150px;
+    margin: 0;
+    padding: 10px
+}
+#grid {
+    display: grid;
+    grid-template-columns: 150px 1fr;
+}
+.second {
+    padding: 0 10px 
+}
