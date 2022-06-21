@@ -1,19 +1,22 @@
 let answer = [];
+let countAll=0, countTrue=0;
 function testOS(){
 
 }
 function checkSubmission(){
-    let result;
+    let result
     let check;
     const answerTo = answer.pop()
     const submission = document.querySelector("#submissionSentence");
     if(answerTo === submission.value){
         result = "정답.";
         check = true;
+        countTrue++; countAll++
     }
     else{
         result = "오답.";
         check = false;
+        countAll++;
     }
     return answerPrintAndCheck(result, check, answerTo);
 }
@@ -30,7 +33,7 @@ function questionPrintAndSetAnswer(q, a){
 function answerPrintAndCheck(result, check, answerTo){
     const checkAnswer = document.querySelector("#checkAnswer");
     const checkFalse = document.querySelector("#checkfalse");
-    checkAnswer.innerText=`${result}`;
+    checkAnswer.innerText=`${result} 총 문제${countAll}, 맞춘 개수 ${countTrue}`;
     if(!check){
         checkFalse.innerText=`정답은 ${answerTo}`;
     }
@@ -50,7 +53,7 @@ const data = {
     9:["부트캠프","신병 훈련소"],
     10:["TDD","테스트 코드를 먼저 작성하는 개발 방법론"],
     11:["폭포수모델","순서대로 일이 진행되고 다시 되돌아 갈 수 없는 구조로 일하는 방식.모델의 흐름은 소프트웨어 요구사항 분석 단계에서 시작하여, 소프트웨어 설계, 소프트웨어 구현, 소프트웨어 시험, 소프트웨어 통합 단계 등을 거쳐, 소프트웨어 유지보수 단계에까지 이른다."],
-    12:["애자일"," 소프트웨어 엔지니어링에 대한 개념적인 얼개로, 프로젝트의 생명주기동안 반복적인 개발을 촉진한다. 최근에는 애자일 게임 보급 등의 여파로 소프트웨어 엔지니어링 뿐 아니라 다양한 전문 분야에서 실용주의적 사고를 가진 사람들이 적용하려는 시도를 하고 있다."],
+    12:["애자일"," 소프트웨어 엔지니어링에 대한 개념적인 얼개로, 프로젝트의 생명주기동안 반복적인 개발을 촉진한다. 최근에는 소프트웨어 엔지니어링 뿐 아니라 다양한 전문 분야에서 실용주의적 사고를 가진 사람들이 적용하려는 시도를 하고 있다."],
     13:["객체지향","컴퓨터 프로그래밍의 패러다임 중 하나이다. 컴퓨터 프로그램을 명령어의 목록으로 보는 시각에서 벗어나 여러 개의 독립된 단위, 즉 '객체'들의 모임으로 파악하고자 하는 것이다. 각각의 객체는 메시지를 주고받고, 데이터를 처리할 수 있다."]
 }
 
