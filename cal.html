@@ -14,31 +14,49 @@
                 <div>
                     <h3><a href="doomsdayClock.html">시계</a></h3>
                 </div>
+                <div>
+                    <h3><a href="sentenceTest.html">테스트</a></h3>
+                </div>
             </div>
 <form class="twoTen">
     <input type="text" placeholder="2진수 값을 입력해 주세요" name="info_two" id="two" value="" />
-    <input type="button" value = "이진수를 십진수로" onclick="twoTen()" id="btn_twoten">
+    <input type="button" value = "이진수를 십진수로" onclick="calOS();">
     <p id="answerTwoTen"></p>
 </form>
 <form class="tenTwo">
     <input type="text" placeholder="10진수 값을 입력해 주세요" name="info_ten" id="ten" value="" />
-    <input type="button" value = "십진수를 이진수로" onclick="tenTwo()">
+    <input type="button" value = "십진수를 이진수로" onclick="calOS()">
     <p id="answerTenTwo"></p>
 </form>
 <form class="twoSixteen">
     <input type="text" placeholder="2진수 값을 입력해 주세요" name="info_twosixteen" id="twosixteen" value="" />
-    <input type="button" value = "이진수를 십육진수로" onclick="twoSixteen()">
+    <input type="button" value = "이진수를 십육진수로" onclick="calOS()">
     <p id="answerTwoSixteen"></p>
 </form>
 <form class="sixteenTwo">
     <input type="text" placeholder="16진수 값을 입력해 주세요" name="info_sixteentwo" id="sixteentwo" value="" />
-    <input type="button" value = "십육진수를 이진수로" onclick="sixteenTwo()">
+    <input type="button" value = "십육진수를 이진수로" onclick="calOS()">
     <p id="answerSixTeenTwo"></p>
 </form>
 <form>
-    <input type="text" placeholder="큰 숫자 더하기. 2^53 이상의 숫자를 더할 수 있습니다" id="Plus" value="" />
-    <input type="button" value = "큰 수 더하기" onclick="calPlus()">
+    <input type="text" placeholder="큰 숫자 더하기. + 부호만 사용가능" id="Plus" value="" />
+    <input type="button" value = "큰 수 더하기" onclick="calOS()">
     <p id="calPlus"></p>
+</form>
+<form>
+    <input type="text" placeholder="큰 숫자 곱하기. * 부호만 사용가능" id="Multi" value="" />
+    <input type="button" value = "큰 수 곱하기" onclick="calOS()">
+    <p id="calMulti"></p>
+</form>
+<form>
+    <input type="text" placeholder="구현중. / 부호만 사용가능" id="Divide" value="" />
+    <input type="button" value = "나누기" onclick="calOS()">
+    <p id="calDivide"></p>
+</form>
+<form>
+    <input type="text" placeholder="큰 숫자 빼기. - 부호만 사용가능" id="Minus" value="" />
+    <input type="button" value = "큰 수 빼기" onclick="calOS()">
+    <p id="calMinus"></p>
 </form>
 <script src="cal.js"></script>
     </main>

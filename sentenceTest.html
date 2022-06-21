@@ -1,0 +1,45 @@
+<!--
+    문장을 출력함. 랜덤으로 출력. 문장은 리터럴.
+    문장의 일부를 비워둔채 출력. 랜덤. 문장은 객체에 저장. 
+    인풋의 정답과 문제를 비교해 정오를 출력. 맞춘 경우 객체에 개수 저장
+-->
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>wecode_자기소개</title>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <main>
+            <h1 id="title"><a href="index.html">36기 이석원 잡동사니</a></h1>
+            <div id="grid">
+                <div>
+                    <h3><a href="cal.html">계산기</a></h3>
+                </div>
+                <div>
+                    <h3><a href="doomsdayClock.html">시계</a></h3>
+                </div>
+                <div>
+                    <h3><a href="sentenceTest.html">테스트</a></h3>
+                </div>
+            </div>
+            <div>
+                <form>
+                <h2>문제</h2>
+                <p id="question"></p>
+                <input type="button" onclick="question()" value="새로운 문제">
+                </form>
+            </div>
+            <div>
+                <form>
+                    <input type="text" placeholder="띄어쓰기 없이 정답을 입력하세요." id="submissionSentence" value="" />
+                    <input type="button" onclick="checkSubmission()" value="제출">
+                    <p id="checkAnswer"></p>
+                    <p id="checkfalse"></p>
+                </form>
+            </div>
+        </main>
+    </body>
+    <script src="sentenceTest.js"></script>
+</html>
